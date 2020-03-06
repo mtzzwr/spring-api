@@ -1,9 +1,13 @@
 package com.mtzzwr.odonto.model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -23,6 +27,9 @@ public class Dentista {
 	private String cro;
 	private String telefone;
 	private String email;
+	
+	@ManyToMany
+	private List<Especialidade> especialidades;
 
 	public Long getCodigo() {
 		return codigo;
@@ -64,6 +71,14 @@ public class Dentista {
 		this.email = email;
 	}
 
+	public List<Especialidade> getEspecialidades() {
+		return especialidades;
+	}
+
+	public void setEspecialidades(List<Especialidade> especialidades) {
+		this.especialidades = especialidades;
+	}
+	
 	@Override
 	public String toString() {
 		return "Dentista [codigo=" + codigo + ", nome=" + nome + ", cro=" + cro + ", telefone=" + telefone + ", email="

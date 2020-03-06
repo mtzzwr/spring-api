@@ -9,6 +9,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.mtzzwr.odonto.dto.DentistaDTO;
 import com.mtzzwr.odonto.model.Dentista;
 import com.mtzzwr.odonto.repository.DentistaRepository;
 
@@ -33,6 +35,7 @@ public class DentistaResource {
 	
 	// todos os dentistas
 	@GetMapping("/dentistas")
+	@Secured({"ROLE_DENTISTA", "ROLE_PACIENTE"})
 	public List<Dentista> getDentistas(){
 		return dentistaRepository.findAll();
 	}
@@ -44,8 +47,19 @@ public class DentistaResource {
 		return dentista.isPresent() ? ResponseEntity.ok(dentista.get()) : ResponseEntity.notFound().build();
 	}
 	
+	@GetMapping("/dentistas/cro/{cro}")
+	public List<Dentista> getDentistaCro(@PathVariable String cro){
+		return dentistaRepository.findByCro(cro);
+	}
+	
+	@GetMapping("/dentistas/nome/{nome}")
+	public List<Dentista> getDentistaNome(@PathVariable String nome){
+		return dentistaRepository.findByLikeNome(nome);
+	}
+	
 	// criar um novo dentista
 	@PostMapping("/dentistas")
+	@Secured("ROLE_ADMIN")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Dentista gravar(@Valid @RequestBody Dentista dentista) {
 		Dentista novoDentista = dentistaRepository.save(dentista);
