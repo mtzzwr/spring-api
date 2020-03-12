@@ -35,7 +35,6 @@ public class DentistaResource {
 	
 	// todos os dentistas
 	@GetMapping("/dentistas")
-	@Secured({"ROLE_DENTISTA", "ROLE_PACIENTE"})
 	public List<Dentista> getDentistas(){
 		return dentistaRepository.findAll();
 	}
@@ -59,7 +58,6 @@ public class DentistaResource {
 	
 	// criar um novo dentista
 	@PostMapping("/dentistas")
-	@Secured("ROLE_ADMIN")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Dentista gravar(@Valid @RequestBody Dentista dentista) {
 		Dentista novoDentista = dentistaRepository.save(dentista);
