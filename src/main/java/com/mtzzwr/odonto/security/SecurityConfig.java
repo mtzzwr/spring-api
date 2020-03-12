@@ -15,13 +15,20 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
-@EnableGlobalMethodSecurity(securedEnabled = true)
+@EnableGlobalMethodSecurity(securedEnabled = true, prePostEnabled = true)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	@Autowired
 	private JwtAuthService jwtAuthService;
 	
+	@Autowired
 	private UserDetailServiceImpl userDetailService;
+	
+	@Bean
+	@Override
+	public AuthenticationManager authenticationManagerBean() throws Exception {
+		return super.authenticationManagerBean();
+	}
 	
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -31,7 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.and()
 			.authorizeRequests()
 			.antMatchers(HttpMethod.POST, "/odonto/auth/login").permitAll()
-			.antMatchers(HttpMethod.GET, "/odonto/dentistas/**").hasRole("USER")
+			.antMatchers(HttpMethod.GET, "/odonto/dentistas/**").hasRole("ADMIN")
 			.antMatchers(HttpMethod.POST, "/odonto/dentistas").hasRole("ADMIN")
 			.antMatchers(HttpMethod.PUT, "/odonto/dentistas").hasRole("ADMIN")
 			.antMatchers(HttpMethod.DELETE, "/odonto/dentistas").hasRole("ADMIN")
