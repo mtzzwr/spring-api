@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "odonto-inf4",
+  "private_key_id": "68cbc31289680728ab777849cfa97ad8369213b5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDZHaSgu/uzMJYn\nJhyn5BFPh5ssZkMjIlZU3sOrg5APr2OPAj5sJN5dWXl7FukodEwQDIENGW53JwT3\nTR79XwD48PQbi1Rnb1CN+NbMcS17fwZxyluhjYSgyPbnuRV82PBkM1PmyvxnNP0+\ncJcJJPPy94Xy5Y8WnKbC0DW4KvMVxzLmdcYtQBhx5oQh5XfLvm/ltuspruFj6cpk\n2GcicQ7PjBMJeoVTTxVSXhKKWnqZ3tLmkxQe+L/E3ua5xr/stPXwMdUnuYoeOEjE\nEvRsGwXC7crQFXmI8UJ+pdSOvHHrXJGn7wPhTqWyUJysLjpt2y3Kj7X3wxenmMl3\nOJ/qGZ0tAgMBAAECggEAAXwZKUs8YRfdEwI/0iH2ZQ67BsCq/fDEbHHNHq+vUaFI\nrENe6kTpj/PLAw/NTFDYtr6rJWdk3nY7GW1r+yc8623CH1CHJTPLf1bEVrWBkt6q\nnrkXuRx/9yfy9SoTikrHpTc0NxM570xSJghX3TeuOdQ+JvCNBSHRC7PxKq0BX33Z\nMvGh1oiw57XsdJq+rqDUw/y18Ai6BFOFppy5arLfGVV3ZhwQ877/FLQf1Onl2U8O\nbnmWOvq1uLgaGJd7nu6OiqMBkbr5GkE5e6fbZtDVFFc1wVpWtdmanZ037DtYWTAQ\n+GVc+Gn6SshCxQXbfCwGuNT0yQC+CEeCef2sLTI3oQKBgQDvOk4dN2KyqyTTc4i0\nUAEs0DBzgEz2OENo/SdkFDlGTJWVbV5O1C/hV14Pb770Cq6iGD4yKsrDD0KC8D4Q\n1SyeW65NCRx3WXwgM2epZ2x31YZpBm3OvhR2G5s1ttXNt9E0bnREWtD6med71ATF\narwse31qsXpZYQgH+gEkRRY5DQKBgQDoVngesjOklUMNyory4khei1lYP6MMFhsK\nfEPLQ78CGyFR+LSbTGAnUfh233BPqs2FbYXeQ7E6a1VMmqu2OCxVL01qSDSZIsFo\ngYrDV0puASYg8N8O1BEk4Uo/W9vImLyKOmk4Ip8hCuqZGo1+iursVksVA3Adl7aS\n+gp8ozesoQKBgQCkH5orzS23alcPgroNCr5jokk7VJB4c807oEKAFKfepPgS1j/X\nURewP6JWcNHO1+1LY9p3zIfjHvsAnhXWsomz8y43x8Jx10CjTuEVhdESvblDIJgB\nOMMM7I+lYFR6mFu83vKBWtT4uNHpUGIdlsaWtforUquf2kQKROi3m3ZNmQKBgQCF\ns4z4jTAu3D50J0SCtTlUPvixUh2wDOCOziftRxUaTyaDl43HeNI0jnVfYwGstuwC\nhp5s46OPrMivhqqd+AF7G/d+3AJ4xYlrbHDALPGGEF8ywap7TAp5oLQrdd8qtsp4\n+Vgnl7TfPPr4FFGsqqC6VIZsl0fjn7TPK9jxFLQrQQKBgQC4NQTJ/aOcxDj5ws8i\nx2lp/IY+CX4DZRcxVahiF9umSuUTGtBb3L0Xr+1+4QRSANLa8ciGsRPXaLBSU5O2\nx3ZXxa2AP3ePeVPzuGrU5VFoyZhU3jKWZqCYK6iS3yoQ3/FSNhMubYJCXMkMRLdj\nX+8/VCKdpl5kznARwSXpVZtwpA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-8angy@odonto-inf4.iam.gserviceaccount.com",
+  "client_id": "117519364930642743540",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-8angy%40odonto-inf4.iam.gserviceaccount.com"
+}

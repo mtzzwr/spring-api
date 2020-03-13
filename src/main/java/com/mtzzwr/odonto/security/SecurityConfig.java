@@ -40,6 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers(HttpMethod.POST, "/odonto/auth/login").permitAll()
 			.antMatchers(HttpMethod.GET, "/odonto/dentistas/**").hasRole("USER")
 			.antMatchers(HttpMethod.POST, "/odonto/dentistas").hasRole("ADMIN")
+			.antMatchers(HttpMethod.POST, "/odonto/dentistas/foto/**").hasRole("ADMIN")
 			.antMatchers(HttpMethod.PUT, "/odonto/dentistas").hasRole("ADMIN")
 			.antMatchers(HttpMethod.DELETE, "/odonto/dentistas").hasRole("ADMIN")
 			.anyRequest().authenticated()

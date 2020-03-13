@@ -24,6 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mtzzwr.odonto.dto.DentistaDTO;
 import com.mtzzwr.odonto.model.Dentista;
 import com.mtzzwr.odonto.repository.DentistaRepository;
+import com.mtzzwr.odonto.upload.FirebaseStorageService;
+import com.mtzzwr.odonto.upload.UploadInput;
 
 @RestController
 @RequestMapping("/odonto")
@@ -32,6 +34,9 @@ public class DentistaResource {
 	
 	@Autowired
 	private DentistaRepository dentistaRepository;
+	
+	@Autowired
+	private FirebaseStorageService uploadFotoService;
 	
 	// todos os dentistas
 	@GetMapping("/dentistas")
@@ -82,6 +87,11 @@ public class DentistaResource {
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void deletar(@PathVariable Long codigo) {
 		dentistaRepository.deleteById(codigo);
+	}
+	
+	@PostMapping("/dentistas/foto")
+	public void uploadFoto(@RequestBody UploadInput fotoUpload) {
+		uploadFotoService.upload(fotoUpload);
 	}
 	
 }
